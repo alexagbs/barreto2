@@ -104,6 +104,9 @@ body {
 	grid-area: footer;
 	background: linear-gradient(to right, #ffffcc 0%, #ff99cc 100%);
 }
+body,*{
+	font-family:font-family: 'Raleway', sans-serif;
+}
 
 /* header*/
 #logo {

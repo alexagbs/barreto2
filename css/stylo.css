@@ -20,9 +20,6 @@
 		align-items: center;
 		text-align: center;
 	}
-
-
-
 	nav {
 		flex-wrap: wrap;
 		flex-direction: column;

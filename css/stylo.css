@@ -193,12 +193,6 @@ img {
 	}
 }
 
-.about {
-	background-color: $text-color;
-	color: $bg-color;
-	border-bottom: 1px solid $sborder;
-}
-
 .card-img-overlay {
 	background-color: rgba(0, 0, 0, 0.7);
 }

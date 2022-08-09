@@ -14,53 +14,14 @@
 			"body"
 			"footer";
 	}
+.contenido-nos{
+	align-items: center;
+	text-align: center;
+}
 
-	nav ul {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-	}
-	nav {
-		flex-wrap: wrap;
-		flex-direction: column;
-		align-items: center;
-	}
-
-
-
-	.gallery-container {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-
-
-	.nosotros-titulos {
-		text-align: center;
-	}
-
-	.contenido-nosotros {
-		flex-direction: column-reverse;
-
-
-	}
-
-
-
-
-
-	.blog-post {
-		flex-wrap: wrap;
-	}
-
-	.equipo {
-		flex-direction: column;
-	}
-
-	.contenedor {
-		flex-wrap: wrap;
-
-
-	}
+.galeria{
+	align-items: center;
+}
 }
 
 @media only screen and (min-width: 600px) {
@@ -71,12 +32,6 @@
 			"body"
 			"footer";
 	}
-
-	.gallery-container {
-		grid-template-columns: repeat(3, 1fr);
-
-	}
-
 
 
 
@@ -104,8 +59,10 @@ body {
 	grid-area: footer;
 	background: linear-gradient(to right, #ffffcc 0%, #ff99cc 100%);
 }
-body,*{
-	font-family:'Raleway', sans-serif;
+
+body,
+* {
+	font-family: 'Raleway', sans-serif;
 }
 
 /* header*/
@@ -115,57 +72,26 @@ body,*{
 	display: flex;
 }
 
-nav {
+.menu {
 	display: flex;
-	align-items: center;
-	text-align: center;
-	width: 100%;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
+	flex-direction: column-reverse
 }
 
-nav ul {
-	background-color: rgba(202, 160, 241);
-	width: 100%;
-	text-align: center;
-	align-items: center;
-	display: flex;
-}
-
-nav li {
-	display: flex;
-	width: 50%;
-
-}
-
-nav a {
-	text-decoration: none;
-	color: white;
-	padding: 0%;
-	width: 0%;
-	display: flex;
-
-}
-
-nav li:hover {
-	background-color: antiquewhite;
+.header .navbar {
+	background-color: rgb(224, 159, 224) !important;
 }
 
 /* inicio*/
 .img-promo {
-	width: 200px;
-	height: 200px;
-	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	border-radius: 30%;
 }
 
-.contenedor {
-	display: flex;
-	flex-direction: row;
+.inicio {
+	align-items: center;
 	text-align: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
 }
-
 
 .saludo-index {
 	display: flex;
@@ -230,68 +156,66 @@ nav li:hover {
 	}
 }
 
-.gallery__item:hover {
-	opacity: 0.8;
 
+
+img {
+	height: 350px;
+	width: 300px;
 }
 
-.gallery-container {
-	max-width: 1000px;
-	margin: auto;
-	display: grid;
-	grid-gap: 4px;
+.gallery img {
+	background: #fff;
+	padding: 10px;
+	max-width: 100%;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
 }
 
-.gallery__item {
-	position: relative;
-
-}
-
-
-.gallery__img {
-	height: 100%;
-	object-fit: cover;
-	width: 100%;
-	max-width: 400px
-}
 
 /*nosotros */
-.nosotros {
-	color: violet;
-}
-
-.equipo {
-	display: flex;
-}
-
-.presen {
-	display: flex;
-	background: rgb(223, 202, 228);
-	box-sizing: border-box;
-	max-width: 350px;
+.nos-titulo {
+	font-size: 35px;
 	text-align: center;
-	align-items: center;
+	color: #85aedd;
+	animation-name: nosotros;
+	animation-duration: 3s;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
-}
-
-#index-nos {
 	align-items: center;
-	display: flex;
-	flex-direction: column;
+
 }
 
-#carouselExampleControls {
-	width: 350px;
-	height: 400px;
-	display: flex;
-	padding-top: 20px;
+@keyframes nosotros {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
 
-.d-block w-100 {
-	width: 200px;
-	height: 300px;
+.about {
+	background-color: $text-color;
+	color: $bg-color;
+	border-bottom: 1px solid $sborder;
+}
+
+.card-img-overlay {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card:hover .card-img-overlay {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.card1 img {
+	max-height: 420px;
+	object-fit: cover;
+}
+
+.card2 img,
+.card3 img {
+	max-height: 200px;
+	object-fit: cover;
 }
 
 
@@ -377,16 +301,6 @@ nav li:hover {
 
 }
 
-.blog-post {
-	display: flex;
-	text-align: center;
-	flex-direction: row;
-	align-items: stretch;
-	justify-content: center;
-
-
-}
-
 
 .imagen-blog {
 	width: 200px;
@@ -394,16 +308,15 @@ nav li:hover {
 	border-radius: 50%;
 }
 
-.card-img-top {
+.card-blog-img-top {
 	width: 200px;
 	height: 200px;
 }
 
-.card {
+
+.card-blog {
 	max-width: 300px;
 	min-height: 300px;
-	display: flex;
-	flex-direction: column;
 	margin-left: 10px;
 	margin-top: 30px;
 
